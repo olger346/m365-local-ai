@@ -1,0 +1,21 @@
+# Entorno virtual y caché de Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+
+# Variables de entorno, configuraciones personales y credenciales de sesión
+# (CRÍTICO: Nunca subir tus archivos personales a Git; solo se suben los *.example.*)
+.env
+.m365_token_cache.bin
+.m365_short_ids.json
+config/rules.yaml
+config/prompts.yaml
+
+# Base de datos local de auditoría
+*.sqlite3
+*.db

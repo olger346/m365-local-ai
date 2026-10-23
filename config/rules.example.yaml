@@ -1,0 +1,42 @@
+# Plantilla de ejemplo: Copia este archivo a config/rules.yaml y personalízalo
+
+autonomy:
+  # Si es false, NUNCA enviará correos automáticamente (todo irá a Borradores)
+  enable_auto_send: true
+  
+  # Confianza mínima (0.0 a 1.0) que debe reportar la IA local para permitir auto-envío
+  min_confidence_for_auto_send: 0.85
+
+  # Máximo número de destinatarios en el hilo para permitir auto-envío
+  # (Evita responder automáticamente a cadenas masivas de toda la empresa)
+  max_recipients_for_auto_send: 3
+
+# Lista blanca para envío automático (Auto-Send)
+# Si un remitente o dominio está aquí y cumple la confianza mínima, se enviará sin intervención.
+# Si no está aquí, la IA creará un BORRADOR en Outlook para tu revisión.
+whitelist:
+  allowed_senders:
+    - "colega.confianza@ejemplo.com"
+  allowed_domains:
+    # Descomenta y agrega el dominio de tu empresa si deseas auto-responder a colegas internos:
+    # - "tuempresa.com"
+  allowed_categories:
+    - "consulta_frecuente"
+    - "confirmacion_agenda"
+    - "solicitud_estatus"
+
+# Lista negra / Exclusiones estrictas (NUNCA responder ni crear borrador)
+ignore_rules:
+  blocked_sender_substrings:
+    - "no-reply"
+    - "noreply"
+    - "do-not-reply"
+    - "mailer-daemon"
+    - "postmaster"
+    - "notifications@"
+    - "alertas@"
+  blocked_subject_keywords:
+    - "Newsletter"
+    - "Boletín"
+    - "Factura automática"
+    - "Verification code"
