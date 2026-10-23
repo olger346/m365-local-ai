@@ -1,6 +1,6 @@
 # M365 Local AI (MCP Server + Auto-Reply Worker)
 
-Conecta tu buzón y calendario de **Microsoft 365 (Outlook)** con **LM Studio**, **Ollama** y **Antigravity IDE** manteniendo tus datos **100% locales**.
+Conecta tu Correo de M365 u Otlook classic y calendario de **Microsoft 365 (Outlook)** con **LM Studio**, **Ollama** y **Antigravity IDE** manteniendo tus datos **100% locales** La idea de este repo es mantener los datos locales, y por recomiendo usar modelos Open Source y alojados localmente. El MCP se puede conectar con herramientas como Claude, Antigravity o algún otro por medio del mcp server, sin embargo, úsalo bajo tu propio riesgo. No me hago responsable por el mal uso o datos exfiltrados hacia compañías de terceros, ni de los datos que puedan ser extraidos de tu máquina. Básicamente este software facilita el uso de herramientas de IA con tus datos personales, ya sea para análisis, automatización o cualquier otro fin.
 
 Soporta dos modos de conexión intercambiables desde el archivo `.env`:
 1. **`M365_BACKEND="outlook_local"` (Windows COM / MAPI):** Se conecta directamente a la aplicación de escritorio de Outlook en Windows. **No requiere permisos de Administrador TI ni registro en Azure Entra ID.**
